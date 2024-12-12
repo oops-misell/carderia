@@ -1,0 +1,824 @@
+<section class="misell-horizontal-list-section">
+  <div class="section-header">
+    {% if section.settings.title != blank %}
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="header-right">
+      {% if section.settings.collection != blank %}
+        <a href="{{ collections[section.settings.collection].url }}" class="view-more-link top-view-more"
+          >もっと見る <span class="arrow-circle arrow-circle1"><span>&gt;</span></span></a
+        >
+      {% endif %}
+      <div class="scroll-buttons">
+        <button class="scroll-button scroll-prev" aria-label="前へ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"></path>
+            <path d="M19 12H5"></path>
+          </svg>
+        </button>
+        <button class="scroll-button scroll-next" aria-label="次へ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {% assign my_collection = collections[section.settings.collection] %}
+  {% if my_collection and my_collection.products.size > 0 %}
+    <div class="outer-container">
+      <!-- 横スクロール用コンテナ -->
+      <div class="product-list-container">
+        <div class="product-list">
+          {% assign product_count = 0 %}
+          {% for product in my_collection.products limit: section.settings.product_limit %}
+            {% assign product_count = product_count | plus: 1 %}
+            <div class="product-item" data-product-id="{{ product.selected_or_first_available_variant.id }}" data-available="{% if product.available %}true{% else %}false{% endif %}">
+              <a href="{{ product.url }}" class="product-link">
+                <div class="product-image-wrapper">
+                  {% if product.featured_image %}
+                    <img
+                      class="product-image"
+                      src="{{ product.featured_image.src | img_url: '360x360' }}"
+                      alt="{{ product.featured_image.alt | escape }}"
+                    >
+                  {% else %}
+                    <img
+                      class="product-image"
+                      src="{{ 'no-image.svg' | asset_url }}"
+                      alt="No image"
+                    >
+                  {% endif %}
+                  <button class="cart-button" aria-label="カートに追加" type="button">
+                    <!-- カートアイコンSVG -->
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-cart"
+                      viewBox="0 0 24 24"
+                    >
+                      <g>
+                        <path d="M2.625,3.275c-0.17,0-0.316-0.062-0.439-0.186C2.062,2.966,2,2.82,2,2.65c0-0.169,0.062-0.315,0.186-0.439
+                          c0.123-0.124,0.27-0.186,0.439-0.186h2.5c0.156,0,0.293,0.052,0.41,0.156C5.652,2.286,5.724,2.41,5.75,2.553L6.141,5.15H20.75
+                          c0.091,0,0.179,0.02,0.264,0.059c0.084,0.039,0.152,0.091,0.205,0.156c0.064,0.065,0.11,0.14,0.137,0.225
+                          c0.025,0.085,0.032,0.173,0.02,0.264l-1.25,9.375c-0.026,0.156-0.098,0.287-0.215,0.391c-0.117,0.104-0.254,0.156-0.41,0.156H7
+                          c-0.156,0-0.293-0.052-0.41-0.156c-0.117-0.104-0.189-0.228-0.215-0.371L4.578,3.275H2.625z M6.482,17.758
+                          c0.488-0.488,1.077-0.732,1.768-0.732c0.689,0,1.279,0.244,1.768,0.732s0.732,1.078,0.732,1.768c0,0.69-0.244,1.279-0.732,1.768
+                          s-1.078,0.732-1.768,0.732c-0.69,0-1.279-0.244-1.768-0.732S5.75,20.216,5.75,19.525C5.75,18.835,5.994,18.246,6.482,17.758z
+                           M6.316,6.4l1.23,8.125h11.406L20.027,6.4H6.316z M9.129,18.646c-0.248-0.247-0.541-0.371-0.879-0.371
+                          c-0.339,0-0.632,0.124-0.879,0.371C7.123,18.894,7,19.187,7,19.525c0,0.339,0.123,0.632,0.371,0.879
+                          c0.247,0.248,0.54,0.371,0.879,0.371c0.338,0,0.631-0.124,0.879-0.371c0.247-0.247,0.371-0.54,0.371-0.879
+                          C9.5,19.187,9.376,18.894,9.129,18.646z M20.643,17.758c0.488,0.488,0.732,1.078,0.732,1.768c0,0.69-0.244,1.279-0.732,1.768
+                          s-1.078,0.732-1.768,0.732c-0.69,0-1.279-0.244-1.768-0.732s-0.732-1.077-0.732-1.768c0-0.69,0.244-1.279,0.732-1.768
+                          s1.077-0.732,1.768-0.732C19.564,17.025,20.154,17.27,20.643,17.758z M19.754,20.404c0.247-0.247,0.371-0.54,0.371-0.879
+                          c0-0.338-0.124-0.631-0.371-0.879c-0.248-0.247-0.541-0.371-0.879-0.371c-0.339,0-0.632,0.124-0.879,0.371
+                          c-0.248,0.248-0.371,0.541-0.371,0.879c0,0.339,0.123,0.632,0.371,0.879c0.247,0.248,0.54,0.371,0.879,0.371
+                          C19.213,20.775,19.506,20.652,19.754,20.404z"></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-info">
+                  <p class="product-title">{{ product.title }}</p>
+                  <p class="product-price">
+                    {% if product.variants.size > 1 %}
+                      {% assign min_price = product.price_min %}
+                      {% assign max_price = product.price_max %}
+                      {% if min_price != max_price %}
+                        {{ min_price | money }}～
+                      {% else %}
+                        {{ min_price | money }}
+                      {% endif %}
+                    {% else %}
+                      {{ product.price | money }}
+                    {% endif %}
+                    <span class="tax-included">(税込)</span>
+                  </p>
+                  {% if product.available %}
+                    {% assign found_inventory = false %}
+                    {% for variant in product.variants %}
+                      {% if variant.inventory_quantity > 0 %}
+                        <p class="product-stock">在庫数 {{ variant.inventory_quantity }}点</p>
+                        {% assign found_inventory = true %}
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+                    {% unless found_inventory %}
+                      <p class="product-stock">在庫なし</p>
+                    {% endunless %}
+                  {% else %}
+                    <p class="product-stock">在庫なし</p>
+                  {% endif %}
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- もっと見るボタン（右下絶対配置） -->
+        {% if section.settings.collection != blank %}
+          <div class="bottom-view-more-container">
+            <a href="{{ collections[section.settings.collection].url }}" class="bottom-view-more-link">
+                <span class="bottom-view-more-link-text">もっと見る</span> 
+                <div class="bottom-view-more-link-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right size-6 text-ui-fg-interactive"><path d="m9 18 6-6-6-6"></path></svg>
+                </div>
+              </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% else %}
+    <p>表示する商品がありません。</p>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "横スクロール商品リスト",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "セクションタイトル",
+      "default": "[最新弾] テラスタルフェスex"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "表示するコレクション"
+    },
+    {
+      "type": "number",
+      "id": "product_limit",
+      "label": "表示する商品の数",
+      "default": 18
+    }
+  ],
+  "presets": [
+    {
+      "name": "横スクロール商品リスト",
+      "category": "コレクション"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .misell-horizontal-list-section {
+    background: #fff;
+    font-family: sans-serif;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 1200px;
+    margin: 0 auto 15px auto;
+  }
+
+  .section-title {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 15px 15px;
+  }
+  @media screen and (max-width: 400px) {
+    .section-title {
+      max-width: 260px;
+    }
+  }
+
+  .view-more-link {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    right: 8px;
+    top: 40px;
+  }
+
+  .outer-container, .section-header {
+    max-width: 756px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  @media screen and (min-width: 768px) {
+    .outer-container, .section-header {
+      max-width: 1200px;
+    }
+  }
+
+  .product-list-container {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    white-space: nowrap;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: grab;
+    pointer-events: none;
+    /* スクロールバーを非表示にする */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+  }
+
+  .product-list-container > * {
+    pointer-events: auto;
+  }
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 8px;
+    row-gap: 20px;
+    padding-left: 16px;
+    user-drag: none;
+    -webkit-user-drag: none;
+    touch-action: pan-x;
+  }
+
+  .product-item {
+    background: #fff;
+    text-align: left;
+    width: 107px; /* スマホ用デフォルトサイズ */
+  }
+
+  @media screen and (min-width: 768px) {
+    .product-item {
+      width: 178px; /* PC用サイズ */
+    }
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 107px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* 在庫切れ商品のスタイル */
+  .product-item[data-available="false"] .product-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+
+  .product-item[data-available="false"] .product-image-wrapper::after {
+    content: "SOLD OUT";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(31, 41, 55);
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 2;
+  }
+  @media screen and (min-width: 768px) {
+    .product-item[data-available="false"] .product-image-wrapper::after {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .product-image-wrapper {
+      height: 178px;
+    }
+  }
+
+  .product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-drag: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+  }
+
+  .product-info {
+    padding-top: 5px;
+    width: 100%; /* 親要素の幅に合わせる */
+  }
+
+  .product-info * {
+    pointer-events: none;
+  }
+
+  .product-title {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #333;
+    font-weight: normal;
+    white-space: normal; /* タイトルの改行を許可 */
+    word-break: break-all; /* 長い単語も強制的に改行 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 2行まで表示 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .product-price {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #000;
+  }
+
+  .product-price .tax-included {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 3px;
+    color: #666;
+  }
+
+  .product-stock {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+  }
+
+  /* もっと見るボタン（右下） */
+  .bottom-view-more-container {
+    padding-left: 1rem;
+    margin-right: 10px;
+    transform: translate(-4px, 0px);
+    position: relative;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 20%);
+  }
+
+
+  .bottom-view-more-link {
+    font-size: 14px;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .bottom-view-more-link-text{
+    color: #3b82f6;
+  }
+  a.view-more-link,
+  div.bottom-view-more-container > a.bottom-view-more-link {
+    color: #9ca3af;
+    transition: transform 0.3s ease;
+    transform: translate(-2px, -1px);
+  }
+  a.view-more-link:hover,
+  div.bottom-view-more-container > a.bottom-view-more-link:hover {
+    transform: translate(0px, -1px);
+  }
+.bottom-view-more-link-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #c6e6ff;
+  color: #3b82f6;
+  transform: translateY(-25px);
+}
+  .bottom-view-more-link span{
+    transform: translateY(25px);
+  }
+  /* a.bottom-view-more-link > span {
+    position: absolute;
+    right: -7px;
+  }
+  a.bottom-view-more-link > span > span {
+    transform: translate(2px,1px);
+  } */
+  .arrow-circle {
+    font-size: 14px;
+    width: 16px;
+    height: 16px;
+    color: #9ca3af;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    line-height: 1;
+    padding-bottom: 1px;
+  }
+
+  .arrow-circle1 span{
+    transform: translate(1px, -1px);
+  }
+  @media screen and (min-width: 768px) {
+    .arrow-circle1 span{
+      display: none;
+    }
+    .arrow-circle {
+      display: none;
+    }
+  }
+
+  /* 矢印ボタン（右側） */
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 10;
+  }
+
+  .right-arrow {
+    right: 0;
+  }
+
+  /* スクロール時のホバーエフクト */
+  .scroll-hover-indicator {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+    display: none;
+    z-index: 1000;
+  }
+
+  .product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    user-drag: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    touch-action: pan-x;
+  }
+
+  .cart-button {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    pointer-events: auto;
+  }
+
+  .cart-button:hover {
+    background: #333;
+  }
+
+  .cart-button svg {
+    width: 16px;
+    height: 16px;
+    transition: fill 0.3s ease;
+  }
+
+  .cart-button:hover svg {
+    fill: #fff;
+  }
+
+  /* 上部のもっと見るリンクのスタイル */
+  .top-view-more {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #3b82f6;
+  }
+
+  /* 上部のもっと見るの矢印は回転させない */
+  .top-view-more .arrow-circle {
+    transform: none;
+    line-height: 1;
+    padding-bottom: 1px;
+  }
+
+  /* 左右の矢印ボタン（PC時のみ表示） */
+  .scroll-buttons {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+    }
+    
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .view-more-link {
+      position: static;
+      font-size: 14px;
+      font-weight: bold;
+      color: #3b82f6;
+    }
+
+    .scroll-buttons {
+      display: flex;
+      gap: 8px;
+      margin-left: 8px;
+    }
+    
+    .scroll-button {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #9ca3af;
+      border-radius: 50%;
+      background: white;
+      color: #9ca3af;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: translateY(-1px);
+    }
+    
+    .scroll-button:hover {
+      background: #f3f4f6;
+      color: white;
+    }
+    
+    .scroll-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .scroll-button span {
+      display: inline-block;
+    }
+
+    .scroll-button svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('.product-list-container');
+  const productList = document.querySelector('.product-list');
+
+  // スクロールホバーインジケーター
+  const indicator = document.createElement('div');
+  indicator.className = 'scroll-hover-indicator';
+  document.body.appendChild(indicator);
+
+  // スクロール関連の変数をグローバルに定義
+  let isScrolling = false;
+  let startX;
+  let scrollLeft;
+  let isDragging = false;
+  let startTime;
+  let touchStartTime;
+  let touchIsDragging = false;
+  let lastScrollTime = 0;
+  const SCROLL_THROTTLE = 16; // 60FPS
+
+  // マウスダウンイベント
+  container.addEventListener('mousedown', (e) => {
+    // カートボタンをクリックした場合のみ、スクロール処理を行わない
+    if (e.target.closest('.cart-button')) {
+      return;
+    }
+    
+    e.preventDefault();
+    document.getSelection().removeAllRanges();
+    
+    startTime = Date.now();
+    isScrolling = true;
+    isDragging = false;
+    container.style.cursor = 'grabbing';
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+  });
+
+  // マウスムーブイベント
+  container.addEventListener('mousemove', (e) => {
+    if (!isScrolling) return;
+
+    const currentTime = Date.now();
+    if (currentTime - lastScrollTime < SCROLL_THROTTLE) return;
+
+    e.preventDefault();
+    isDragging = true;
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 1.2; // よりスムーズな速度
+    container.scrollLeft = scrollLeft - walk;
+    lastScrollTime = currentTime;
+  });
+
+  // マウスアップイベント
+  container.addEventListener('mouseup', (e) => {
+    const timeElapsed = Date.now() - startTime;
+    
+    // ドラッグしていない、かつクリックが短時間の場合のみ、リンクをクリック
+    if (!isDragging && timeElapsed < 200) {
+      const link = e.target.closest('a');
+      if (link && !e.target.closest('.cart-button')) {
+        window.location.href = link.href;
+      }
+    }
+    
+    isScrolling = false;
+    container.style.cursor = 'grab';
+  });
+
+  // マウスリーブイベント
+  container.addEventListener('mouseleave', () => {
+    isScrolling = false;
+    container.style.cursor = 'grab';
+    indicator.style.display = 'none';
+  });
+
+  // タッチスタートイベント
+  container.addEventListener('touchstart', (e) => {
+    if (e.target.closest('.cart-button')) {
+      return;
+    }
+    
+    document.getSelection().removeAllRanges();
+    
+    touchStartTime = Date.now();
+    touchIsDragging = false;
+    startX = e.touches[0].pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+  }, { passive: false });
+
+  // タッチムーブイベント
+  container.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    touchIsDragging = true;
+    const x = e.touches[0].pageX - container.offsetLeft;
+    const walk = (x - startX) * 2;
+    container.scrollLeft = scrollLeft - walk;
+  }, { passive: false });
+
+  container.addEventListener('touchend', (e) => {
+    const timeElapsed = Date.now() - touchStartTime;
+    
+    // ドラッグしていない、かつタッチが短時間の場合は、クリックイベントを許可
+    if (!touchIsDragging && timeElapsed < 200) {
+      const target = e.target;
+      if (target.closest('.cart-button') || target.closest('a')) {
+        e.preventDefault();
+        target.click();
+      }
+    }
+  });
+
+  // カートボタンのクリックイベント
+  document.querySelectorAll('.cart-button').forEach(button => {
+    button.addEventListener('click', async function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const productItem = this.closest('.product-item');
+      const productId = productItem.dataset.productId;
+      
+      try {
+        const formData = {
+          'items': [{
+            'id': productId,
+            'quantity': 1
+          }]
+        };
+
+        // Shopifyのカート追加APIを呼び出す
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to add to cart');
+        }
+
+        const result = await response.json();
+        console.log('Product added to cart:', result);
+
+        // カートの内容を更新（オプション）
+        if (typeof window.refreshCart === 'function') {
+          window.refreshCart();
+        }
+
+        // 成功メッセージを表示（オプション）
+        alert('商品をカートに追加しました');
+
+      } catch (error) {
+        console.error('Error adding to cart:', error);
+        alert('カートに追加できませんでした');
+      }
+    });
+  });
+
+  // 商品リンクのクリックイベント
+  document.querySelectorAll('.product-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // カートボタンがクリックされた場合は、リンクの遷移を防ぐ
+      if (e.target.closest('.cart-button')) {
+        e.preventDefault();
+        return;
+      }
+    });
+  });
+
+  // 1列の幅を計算する関数
+  function getColumnWidth() {
+    const productItem = document.querySelector('.product-item');
+    if (!productItem) return 0;
+    return productItem.offsetWidth + 8; // 8pxはgrid-gapの値
+  }
+
+  // スクロールボタンの制御
+  function updateScrollButtons() {
+    const prevButton = document.querySelector('.scroll-prev');
+    const nextButton = document.querySelector('.scroll-next');
+    if (!prevButton || !nextButton) return;
+
+    prevButton.disabled = container.scrollLeft <= 0;
+    nextButton.disabled = container.scrollLeft >= (container.scrollWidth - container.clientWidth);
+  }
+
+  // 1列分スクロールする関数
+  function scrollOneColumn(direction) {
+    const columnWidth = getColumnWidth();
+    const currentScroll = container.scrollLeft;
+    const targetScroll = currentScroll + (columnWidth * direction);
+    
+    container.scrollTo({
+      left: targetScroll,
+      behavior: 'smooth'
+    });
+  }
+
+  // スクロールボタンのイベントリスナー
+  document.querySelector('.scroll-prev')?.addEventListener('click', () => scrollOneColumn(-1));
+  document.querySelector('.scroll-next')?.addEventListener('click', () => scrollOneColumn(1));
+
+  // スクロール時にボタンの状態を更新
+  container.addEventListener('scroll', updateScrollButtons);
+  window.addEventListener('resize', updateScrollButtons);
+
+  // 初期化時にボタンの状態を設定
+  updateScrollButtons();
+});
+{% endjavascript %}
