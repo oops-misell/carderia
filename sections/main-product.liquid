@@ -124,6 +124,51 @@
 </script>
 {% endcomment %}
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    try {
+      // Get current product information
+      const currentProduct = {
+        id: {{ product.id | json }},
+        title: {{ product.title | json }},
+        url: {{ product.url | json }},
+        image: {{ product.featured_image | img_url: '600x' | json }},
+        variants: [
+          {%- for variant in product.variants -%}
+            {
+              "id": {{ variant.id | json }},
+              "price": {{ variant.price | money | json }}
+            }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ]
+      };
+
+      // Get existing products from localStorage
+      let viewedProducts = JSON.parse(localStorage.getItem('recentlyViewedProducts')) || [];
+      
+      // Remove if same product already exists
+      viewedProducts = viewedProducts.filter(product => product.id !== currentProduct.id);
+      
+      // Add new product to beginning
+      viewedProducts.unshift(currentProduct);
+      
+      // Keep maximum 20 items
+      if (viewedProducts.length > 20) {
+        viewedProducts = viewedProducts.slice(0, 20);
+      }
+      
+      // Save to localStorage
+      localStorage.setItem('recentlyViewedProducts', JSON.stringify(viewedProducts));
+      
+      // For debugging
+      console.log('Added product to history:', currentProduct.title);
+      console.log('Current history:', viewedProducts);
+    } catch (e) {
+      console.error('Failed to save product history:', e);
+    }
+  });
+</script>
+
 {% schema %}
 {
     "name": "t:sections.product_page.name",

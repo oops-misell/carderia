@@ -8,3 +8,15 @@
 blockquote {
   font-style: var(--heading-style) !important;
 }
+
+/* 問い合わせ確認のポップアップの背景カラーを変更 */
+:root {
+  --theme2: #ffffff; /* 白に変更 */
+  --popup-subscription-confirmation-bg: var(--theme2); /* --theme2 を参照 */
+}
+
+  .popup-subscription-confirmation,
+  .popup-contact-confirmation {
+    background-color: var(--popup-subscription-confirmation-bg);
+  }
+

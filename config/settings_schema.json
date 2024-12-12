@@ -2,10 +2,10 @@
   {
     "name": "theme_info",
     "theme_name": "MISELL",
-    "theme_version": "2.0.14",
+    "theme_version": "2.0.15",
     "theme_author": "Oops Inc.",
-    "theme_documentation_url": "https:\/\/misell-manual.wraptas.site\/",
-    "theme_support_url": "https:\/\/shop.misell-theme.com\/pages\/theme-support"
+    "theme_documentation_url": "https://misell-manual.wraptas.site/",
+    "theme_support_url": "https://shop.misell-theme.com/pages/theme-support"
   },
   {
     "name": "t:settings_schema.quick_start.name",
@@ -952,8 +952,8 @@
         },
         "default": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Arial,Meiryo,sans-serif",
         "info": {
-          "en": "Japanese System Font Selection [Reference Site](https:\/\/saruwakakun.com\/font-family)",
-          "ja": "ご使用になりたいフォントファミリーのcssコードを入力してください。デフォルトに入っているコード以外をご利用の場合は、サポート対象外となりますので、お分かりにならない場合は専門の方に相談してください。[マニュアル](https:\/\/misell-manual.wraptas.site\/theme-settings\/font-styles)"
+          "en": "Japanese System Font Selection [Reference Site](https://saruwakakun.com/font-family)",
+          "ja": "ご使用になりたいフォントファミリーのcssコードを入力してください。デフォルトに入っているコード以外をご利用の場合は、サポート対象外となりますので、お分かりにならない場合は専門の方に相談してください。[マニュアル](https://misell-manual.wraptas.site/theme-settings/font-styles)"
         }
       },
       {
@@ -964,8 +964,8 @@
           "ja": "Googleフォント選択時有効(本文)"
         },
         "info": {
-          "en": "Japanese Google Font Selection [Reference Site](https:\/\/fonts.google.com\/?subset=japanese)",
-          "ja": "フォントによりウエイト数が異なります。[Google Fonts公式](https:\/\/fonts.google.com\/?subset=japanese)"
+          "en": "Japanese Google Font Selection [Reference Site](https://fonts.google.com/?subset=japanese)",
+          "ja": "フォントによりウエイト数が異なります。[Google Fonts公式](https://fonts.google.com/?subset=japanese)"
         },
         "default": "'Noto Sans JP', sans-serif",
         "options": [
@@ -1238,8 +1238,8 @@
           "ja": "システムフォント選択時有効(見出し)"
         },
         "info": {
-          "en": "Japanese System Font Selection [Reference Site](https:\/\/saruwakakun.com\/font-family)",
-          "ja": "ご使用になりたいフォントファミリーのcssコードを入力してください。デフォルトに入っているコード以外をご利用の場合は、サポート対象外となりますので、お分かりにならない場合は専門の方に相談してください。[マニュアル](https:\/\/misell-manual.wraptas.site)"
+          "en": "Japanese System Font Selection [Reference Site](https://saruwakakun.com/font-family)",
+          "ja": "ご使用になりたいフォントファミリーのcssコードを入力してください。デフォルトに入っているコード以外をご利用の場合は、サポート対象外となりますので、お分かりにならない場合は専門の方に相談してください。[マニュアル](https://misell-manual.wraptas.site)"
         },
         "default": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Arial,Meiryo,sans-serif"
       },
@@ -1251,8 +1251,8 @@
           "ja": "Googleフォント選択時有効(見出し)"
         },
         "info": {
-          "en": "Japanese Google Font Selection [Reference Site](https:\/\/fonts.google.com\/?subset=japanese)",
-          "ja": "フォントによりウエイト数が異なります。[Google Fonts公式](https:\/\/fonts.google.com\/?subset=japanese)"
+          "en": "Japanese Google Font Selection [Reference Site](https://fonts.google.com/?subset=japanese)",
+          "ja": "フォントによりウエイト数が異なります。[Google Fonts公式](https://fonts.google.com/?subset=japanese)"
         },
         "default": "'Noto Sans JP', sans-serif",
         "options": [
@@ -2598,7 +2598,7 @@
         "type": "text",
         "id": "product_delivery_countdown_delivery_format",
         "label": "t:settings_schema.product_page_and_quick_view.settings.product_delivery_countdown_delivery_format.label",
-        "default": "YYYY\/MM\/DD Day",
+        "default": "YYYY/MM/DD Day",
         "info": "t:settings_schema.product_page_and_quick_view.settings.product_delivery_countdown_delivery_format.info"
       },
       {
@@ -3332,43 +3332,43 @@
         "type": "text",
         "id": "social_facebook",
         "label": "t:settings_schema.social_media.settings.social_facebook.label",
-        "default": "https:\/\/www.facebook.com\/"
+        "default": "https://www.facebook.com/"
       },
       {
         "type": "text",
         "id": "social_twitter",
         "label": "t:settings_schema.social_media.settings.social_twitter.label",
-        "default": "https:\/\/twitter.com\/"
+        "default": "https://twitter.com/"
       },
       {
         "type": "text",
         "id": "social_instagram",
         "label": "t:settings_schema.social_media.settings.social_instagram.label",
-        "default": "https:\/\/www.instagram.com\/"
+        "default": "https://www.instagram.com/"
       },
       {
         "type": "text",
         "id": "social_pinterest",
         "label": "t:settings_schema.social_media.settings.social_pinterest.label",
-        "default": "https:\/\/www.pinterest.com\/"
+        "default": "https://www.pinterest.com/"
       },
       {
         "type": "text",
         "id": "social_youtube",
         "label": "t:settings_schema.social_media.settings.social_youtube.label",
-        "default": "https:\/\/www.youtube.com\/"
+        "default": "https://www.youtube.com/"
       },
       {
         "type": "text",
         "id": "social_behance",
         "label": "t:settings_schema.social_media.settings.social_behance.label",
-        "default": "https:\/\/www.behance.net\/"
+        "default": "https://www.behance.net/"
       },
       {
         "type": "text",
         "id": "social_skype",
         "label": "t:settings_schema.social_media.settings.social_skype.label",
-        "default": "https:\/\/www.skype.com\/"
+        "default": "https://www.skype.com/"
       },
       {
         "type": "text",
@@ -3377,13 +3377,13 @@
           "en": "LINE",
           "ja": "LINE"
         },
-        "default": "https:\/\/line.me\/"
+        "default": "https://line.me/"
       },
       {
         "type": "text",
         "id": "social_tiktok",
         "label": "t:settings_schema.social_media.settings.social_tiktok.label",
-        "default": "https:\/\/www.tiktok.com\/"
+        "default": "https://www.tiktok.com/"
       },
       {
         "type": "header",
@@ -3482,7 +3482,7 @@
         "id": "subscription_mailchimp_form_action",
         "label": "t:settings_schema.news_subscription.settings.subscription_mailchimp_form_action.label",
         "info": "t:settings_schema.news_subscription.settings.subscription_mailchimp_form_action.info",
-        "default": "\/\/myshopify.us18.list-manage.com\/subscribe\/post?u=8a50b61e56896303a04d0243e&amp;id=3c3d06b907"
+        "default": "//myshopify.us18.list-manage.com/subscribe/post?u=8a50b61e56896303a04d0243e&amp;id=3c3d06b907"
       },
       {
         "type": "checkbox",
