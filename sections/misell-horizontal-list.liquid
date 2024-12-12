@@ -214,7 +214,7 @@
     }
   }
 
-  .product-list-container {
+  .misell-horizontal-list-section .product-list-container {
     position: relative;
     overflow-x: auto;
     overflow-y: hidden;
@@ -240,11 +240,11 @@
     }
   }
 
-  .product-list-container > * {
+  .misell-horizontal-list-section .product-list-container > * {
     pointer-events: auto;
   }
 
-  .product-list {
+  .misell-horizontal-list-section .product-list {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -256,19 +256,19 @@
     touch-action: pan-x;
   }
 
-  .product-item {
+  .misell-horizontal-list-section .product-item {
     background: #fff;
     text-align: left;
     width: 107px; /* スマホ用デフォルトサイズ */
   }
 
   @media screen and (min-width: 768px) {
-    .product-item {
+    .misell-horizontal-list-section .product-item {
       width: 178px; /* PC用サイズ */
     }
   }
 
-  .product-image-wrapper {
+  .misell-horizontal-list-section .product-image-wrapper {
     position: relative;
     width: 100%;
     height: 107px;
@@ -278,7 +278,7 @@
   }
 
   /* 在庫切れ商品のスタイル */
-  .product-item[data-available="false"] .product-image-wrapper::before {
+  .misell-horizontal-list-section .product-item[data-available="false"] .product-image-wrapper::before {
     content: "";
     position: absolute;
     top: 0;
@@ -289,7 +289,7 @@
     z-index: 1;
   }
 
-  .product-item[data-available="false"] .product-image-wrapper::after {
+  .misell-horizontal-list-section .product-item[data-available="false"] .product-image-wrapper::after {
     content: "SOLD OUT";
     position: absolute;
     top: 50%;
@@ -301,39 +301,39 @@
     z-index: 2;
   }
   @media screen and (min-width: 768px) {
-    .product-item[data-available="false"] .product-image-wrapper::after {
+    .misell-horizontal-list-section .product-item[data-available="false"] .product-image-wrapper::after {
       font-size: 20px;
     }
   }
 
   @media screen and (min-width: 768px) {
-    .product-image-wrapper {
+    .misell-horizontal-list-section .product-image-wrapper {
       height: 178px;
     }
   }
 
-  .product-image {
+  .misell-horizontal-list-section .product-image {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 20px);
     object-fit: contain;
     user-drag: none;
     -webkit-user-drag: none;
     pointer-events: none;
   }
 
-  .product-info {
+  .misell-horizontal-list-section .product-info {
     padding-top: 5px;
     width: 100%; /* 親要素の幅に合わせる */
   }
 
-  .product-info * {
+  .misell-horizontal-list-section .product-info * {
     pointer-events: none;
   }
 
-  .product-title {
+  .misell-horizontal-list-section .product-title {
     font-size: 14px;
     margin: 5px 0;
     color: #333;
@@ -346,28 +346,28 @@
     overflow: hidden;
   }
 
-  .product-price {
+  .misell-horizontal-list-section .product-price {
     font-size: 14px;
     font-weight: bold;
     margin: 5px 0;
     color: #000;
   }
 
-  .product-price .tax-included {
+  .misell-horizontal-list-section .product-price .tax-included {
     font-size: 12px;
     font-weight: normal;
     margin-left: 3px;
     color: #666;
   }
 
-  .product-stock {
+  .misell-horizontal-list-section .product-stock {
     font-size: 12px;
     color: #666;
     margin: 0;
   }
 
   /* もっと見るボタン（右下） */
-  .bottom-view-more-container {
+  .misell-horizontal-list-section .bottom-view-more-container {
     padding-left: 1rem;
     margin-right: 10px;
     transform: translate(-4px, 0px);
@@ -381,7 +381,7 @@
   }
 
 
-  .bottom-view-more-link {
+  .misell-horizontal-list-section .bottom-view-more-link {
     font-size: 14px;
     color: #3b82f6;
     text-decoration: none;
@@ -392,20 +392,20 @@
     align-items: center;
     transition: transform 0.3s ease;
   }
-  .bottom-view-more-link-text{
+  .misell-horizontal-list-section .bottom-view-more-link-text{
     color: #3b82f6;
   }
   a.view-more-link,
-  div.bottom-view-more-container > a.bottom-view-more-link {
+  div.misell-horizontal-list-section .bottom-view-more-container > a.bottom-view-more-link {
     color: #9ca3af;
     transition: transform 0.3s ease;
     transform: translate(-2px, -1px);
   }
   a.view-more-link:hover,
-  div.bottom-view-more-container > a.bottom-view-more-link:hover {
+  div.misell-horizontal-list-section .bottom-view-more-container > a.bottom-view-more-link:hover {
     transform: translate(0px, -1px);
   }
-.bottom-view-more-link-btn{
+.misell-horizontal-list-section .bottom-view-more-link-btn{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -416,7 +416,7 @@
   color: #3b82f6;
   transform: translateY(-25px);
 }
-  .bottom-view-more-link span{
+  .misell-horizontal-list-section .bottom-view-more-link span{
     transform: translateY(25px);
   }
   /* a.bottom-view-more-link > span {
@@ -426,7 +426,7 @@
   a.bottom-view-more-link > span > span {
     transform: translate(2px,1px);
   } */
-  .arrow-circle {
+  .misell-horizontal-list-section .arrow-circle {
     font-size: 14px;
     width: 16px;
     height: 16px;
@@ -440,20 +440,20 @@
     padding-bottom: 1px;
   }
 
-  .arrow-circle1 span{
+  .misell-horizontal-list-section .arrow-circle1 span{
     transform: translate(1px, -1px);
   }
   @media screen and (min-width: 768px) {
-    .arrow-circle1 span{
+    .misell-horizontal-list-section .arrow-circle1 span{
       display: none;
     }
-    .arrow-circle {
+    .misell-horizontal-list-section .arrow-circle {
       display: none;
     }
   }
 
   /* 矢印ボタン（右側） */
-  .scroll-arrow {
+  .misell-horizontal-list-section .scroll-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -465,12 +465,12 @@
     z-index: 10;
   }
 
-  .right-arrow {
+  .misell-horizontal-list-section .right-arrow {
     right: 0;
   }
 
   /* スクロール時のホバーエフクト */
-  .scroll-hover-indicator {
+  .misell-horizontal-list-section .scroll-hover-indicator {
     position: fixed;
     width: 40px;
     height: 40px;
@@ -481,7 +481,7 @@
     z-index: 1000;
   }
 
-  .product-link {
+  .misell-horizontal-list-section .product-link {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -493,7 +493,7 @@
     touch-action: pan-x;
   }
 
-  .cart-button {
+  .misell-horizontal-list-section .cart-button {
     position: absolute;
     bottom: 4px;
     right: 4px;
@@ -512,22 +512,22 @@
     pointer-events: auto;
   }
 
-  .cart-button:hover {
+  .misell-horizontal-list-section .cart-button:hover {
     background: #333;
   }
 
-  .cart-button svg {
+  .misell-horizontal-list-section .cart-button svg {
     width: 16px;
     height: 16px;
     transition: fill 0.3s ease;
   }
 
-  .cart-button:hover svg {
+  .misell-horizontal-list-section .cart-button:hover svg {
     fill: #fff;
   }
 
   /* 上部のもっと見るリンクのスタイル */
-  .top-view-more {
+  .misell-horizontal-list-section .top-view-more {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -535,45 +535,45 @@
   }
 
   /* 上部のもっと見るの矢印は回転させない */
-  .top-view-more .arrow-circle {
+  .misell-horizontal-list-section .top-view-more .arrow-circle {
     transform: none;
     line-height: 1;
     padding-bottom: 1px;
   }
 
   /* 左右の矢印ボタン（PC時のみ表示） */
-  .scroll-buttons {
+  .misell-horizontal-list-section .scroll-buttons {
     display: none;
   }
 
   @media screen and (min-width: 768px) {
-    .section-header {
+    .misell-horizontal-list-section .section-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 16px;
     }
     
-    .header-right {
+    .misell-horizontal-list-section .header-right {
       display: flex;
       align-items: center;
       gap: 4px;
     }
 
-    .view-more-link {
+    .misell-horizontal-list-section .view-more-link {
       position: static;
       font-size: 14px;
       font-weight: bold;
       color: #3b82f6;
     }
 
-    .scroll-buttons {
+    .misell-horizontal-list-section .scroll-buttons {
       display: flex;
       gap: 8px;
       margin-left: 8px;
     }
     
-    .scroll-button {
+    .misell-horizontal-list-section .scroll-button {
       width: 32px;
       height: 32px;
       border: 1px solid #9ca3af;
@@ -588,21 +588,21 @@
       transform: translateY(-1px);
     }
     
-    .scroll-button:hover {
+    .misell-horizontal-list-section .scroll-button:hover {
       background: #f3f4f6;
       color: white;
     }
     
-    .scroll-button:disabled {
+    .misell-horizontal-list-section .scroll-button:disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
     
-    .scroll-button span {
+    .misell-horizontal-list-section .scroll-button span {
       display: inline-block;
     }
 
-    .scroll-button svg {
+    .misell-horizontal-list-section .scroll-button svg {
       width: 16px;
       height: 16px;
     }
