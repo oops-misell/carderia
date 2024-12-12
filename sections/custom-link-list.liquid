@@ -1,0 +1,160 @@
+{% schema %}
+{
+  "name": "カスタムリンクリスト",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "セクションタイトルを表示",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "セクションタイトル",
+      "default": "カスタムリンクリスト"
+    }
+  ],
+  "max_blocks": 10,
+  "blocks": [
+    {
+      "type": "link",
+      "name": "コレクション",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "コレクション",
+          "info": "手動設定がオフの場合に使用されます"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_manual_settings",
+          "label": "手動で設定する",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "手動設定項目"
+        },
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "タイトル",
+          "default": "タイトル",
+          "info": "手動設定がオンの場合に使用されます"
+        },
+        {
+          "type": "text",
+          "id": "link_description",
+          "label": "説明",
+          "default": "説明文をここに入力",
+          "info": "手動設定がオンの場合に使用されます"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_image",
+          "label": "画像",
+          "info": "手動設定がオンの場合に使用されます"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "リンクURL",
+          "info": "手動設定がオンの場合に使用されます"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "カスタムリンクリスト",
+      "blocks": [
+        {
+          "type": "link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div class="custom-link-list-section mb-20">
+  {%- if section.blocks.size > 0 -%}
+    <div class="container">
+      {%- if section.settings.show_title and section.settings.title != blank -%}
+        <div class="row justify-content-center">
+          <h2 class="h4 col-auto mb-10 text-center">{{ section.settings.title }}</h2>
+        </div>
+      {%- endif -%}
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'link' -%}
+              {%- if block.settings.use_manual_settings -%}
+                <a href="{{ block.settings.link_url }}" class="custom-link-item d-flex align-items-center text-decoration-none p-3 mb-3">
+                  {%- if block.settings.link_image -%}
+                    <div class="custom-link-image mr-15 my-5">
+                      {{ block.settings.link_image | image_url: width: 200 | image_tag: 
+                        class: 'w-100 h-auto',
+                        loading: 'lazy', 
+                        alt: block.settings.link_title 
+                      }}
+                    </div>
+                  {%- endif -%}
+                  <div class="custom-link-text flex-grow-1 my-5">
+                    <h3 class="h5 mb-0">{{ block.settings.link_title }}</h3>
+                    <p class="mb-0">{{ block.settings.link_description }}</p>
+                  </div>
+                  <div class="custom-link-arrow">
+                    {% render 'icon-theme-007' %}
+                  </div>
+                </a>
+              {%- else -%}
+                {%- if block.settings.collection != blank -%}
+                  {%- assign collection = collections[block.settings.collection] -%}
+                  {%- assign description_text = collection.description | strip_html | strip -%}
+                  <a href="{{ collection.url }}" class="custom-link-item d-flex align-items-center text-decoration-none p-3 mb-3">
+                    {%- if collection.image -%}
+                      <div class="custom-link-image mr-15 my-5">
+                        {{ collection.image | image_url: width: 200 | image_tag: 
+                          class: 'w-100 h-auto',
+                          loading: 'lazy', 
+                          alt: collection.title 
+                        }}
+                      </div>
+                    {%- endif -%}
+                    <div class="custom-link-text flex-grow-1 my-5">
+                      <h3 class="h5 mb-0">{{ collection.title }}</h3>
+                      <p class="mb-0">{{ description_text }}</p>
+                    </div>
+                    <div class="custom-link-arrow">
+                      {% render 'icon-theme-007' %}
+                    </div>
+                  </a>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% style %}
+  .custom-link-image {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+  }
+  .custom-link-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40px;
+  }
+{% endstyle %}
