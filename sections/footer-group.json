@@ -1,0 +1,123 @@
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "information_line_hrwxJP": {
+      "type": "information-line",
+      "blocks": {
+        "content_Ebbmqm": {
+          "type": "content",
+          "settings": {
+            "icon": "theme-116",
+            "title": "送料無料",
+            "paragraph": "ご注文合計金額が5,000円以上で送料無料。",
+            "url": ""
+          }
+        },
+        "content_tqKq8E": {
+          "type": "content",
+          "settings": {
+            "icon": "theme-125",
+            "title": "お支払い方法",
+            "paragraph": "クレジットカード: Visa, MasterCard, Maestro, American Express.",
+            "url": ""
+          }
+        },
+        "content_DAwmUc": {
+          "type": "content",
+          "settings": {
+            "icon": "theme-009",
+            "title": "返品について",
+            "paragraph": "商品到着日時より7日以内の返品を受け付けております。",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_Ebbmqm",
+        "content_tqKq8E",
+        "content_DAwmUc"
+      ],
+      "settings": {
+        "title": "",
+        "type": "1",
+        "style": "1"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "1586284608625": {
+          "type": "subscription",
+          "disabled": true,
+          "settings": {
+            "title": "メルマガの購読",
+            "paragraph": "『MISEル』のメルマガを登録してお得な情報・最新の情報を受け取ろう!",
+            "placeholder": "メールアドレスを入力してください",
+            "button_text": "購読！"
+          }
+        },
+        "1586284525260": {
+          "type": "menu",
+          "disabled": true,
+          "settings": {
+            "title": "お店",
+            "show_title_on_desktop": true,
+            "menu": "",
+            "size": 0,
+            "rows_limit": 0
+          }
+        },
+        "footer-0": {
+          "type": "copyright",
+          "settings": {
+            "page_content": ""
+          }
+        },
+        "1586284627913": {
+          "type": "payments",
+          "settings": {}
+        },
+        "2f1bcef1-03b5-442e-b266-1909cbfeea77": {
+          "type": "custom_html",
+          "disabled": true,
+          "settings": {
+            "title": "ご案内",
+            "show_title_on_desktop": true,
+            "page_content": ""
+          }
+        },
+        "menu_NkeTbH": {
+          "type": "menu",
+          "settings": {
+            "title": "Cardéria",
+            "show_title_on_desktop": true,
+            "menu": "footer",
+            "size": 0,
+            "rows_limit": 0
+          }
+        }
+      },
+      "block_order": [
+        "1586284608625",
+        "1586284525260",
+        "footer-0",
+        "1586284627913",
+        "2f1bcef1-03b5-442e-b266-1909cbfeea77",
+        "menu_NkeTbH"
+      ],
+      "settings": {
+        "type": "1",
+        "style": "1",
+        "show_logo": true,
+        "show_button_back_to_top": true,
+        "enable_fixed": false,
+        "enable_follow_on_shop": true
+      }
+    }
+  },
+  "order": [
+    "information_line_hrwxJP",
+    "footer"
+  ]
+}

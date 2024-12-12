@@ -1,0 +1,524 @@
+{
+  "sections": {
+    "1586280477165": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 60,
+        "margin_bottom": 0,
+        "margin_top_mobile": 50,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "1586280453180": {
+      "type": "home-builder",
+      "blocks": {
+        "1586280492143": {
+          "type": "promobox",
+          "settings": {
+            "url": "shopify:\/\/collections\/ポケモンカードゲーム-top",
+            "image": "shopify:\/\/shop_images\/pokeka_white_bg.jpg",
+            "image_size": 900,
+            "image_mobile_size": 900,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "ポケモン",
+            "text_line_2": "",
+            "text_line_3": "",
+            "style": "2",
+            "button_1": "",
+            "button_1_url": "",
+            "color_button_type_1": "default-transparent",
+            "button_2": "",
+            "button_2_url": "",
+            "color_button_type_2": "default-transparent",
+            "list_1": "",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "type-4",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "height": "auto",
+            "min_height": 0,
+            "size_of_column": "auto",
+            "visible": "desktop_mobile",
+            "parallax": "disable",
+            "animation_to": "center",
+            "animation_from": "none",
+            "animation_opacity": "none",
+            "animation_text": "none",
+            "color_text_1": "",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        },
+        "promobox_4KCkFy": {
+          "type": "promobox",
+          "settings": {
+            "url": "shopify:\/\/collections\/ワンピースカードゲーム-top",
+            "image": "shopify:\/\/shop_images\/onepiece_adjusted.jpg",
+            "image_size": 900,
+            "image_mobile_size": 900,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "ワンピース",
+            "text_line_2": "",
+            "text_line_3": "",
+            "style": "2",
+            "button_1": "",
+            "button_1_url": "",
+            "color_button_type_1": "default-transparent",
+            "button_2": "",
+            "button_2_url": "",
+            "color_button_type_2": "default-transparent",
+            "list_1": "",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "type-4",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "height": "auto",
+            "min_height": 0,
+            "size_of_column": "auto",
+            "visible": "desktop_mobile",
+            "parallax": "disable",
+            "animation_to": "center",
+            "animation_from": "none",
+            "animation_opacity": "none",
+            "animation_text": "none",
+            "color_text_1": "",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        },
+        "1586280494368": {
+          "type": "promobox",
+          "settings": {
+            "url": "shopify:\/\/collections\/遊戯王-top",
+            "image": "shopify:\/\/shop_images\/yugioh_white_bg_correct.jpg",
+            "image_size": 900,
+            "image_mobile_size": 900,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "遊戯王",
+            "text_line_2": "",
+            "text_line_3": "",
+            "style": "2",
+            "button_1": "",
+            "button_1_url": "",
+            "color_button_type_1": "default-transparent",
+            "button_2": "",
+            "button_2_url": "",
+            "color_button_type_2": "default-transparent",
+            "list_1": "",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "type-4",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "height": "auto",
+            "min_height": 0,
+            "size_of_column": "auto",
+            "visible": "desktop_mobile",
+            "parallax": "disable",
+            "animation_to": "center",
+            "animation_from": "none",
+            "animation_opacity": "none",
+            "animation_text": "none",
+            "color_text_1": "",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        },
+        "promobox_DEiE6z": {
+          "type": "promobox",
+          "settings": {
+            "url": "shopify:\/\/collections\/デュエルマスターズ-top",
+            "image": "shopify:\/\/shop_images\/duema_white_bg_correct.jpg",
+            "image_size": 900,
+            "image_mobile_size": 900,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "デュエマ",
+            "text_line_2": "",
+            "text_line_3": "",
+            "style": "2",
+            "button_1": "",
+            "button_1_url": "",
+            "color_button_type_1": "default-transparent",
+            "button_2": "",
+            "button_2_url": "",
+            "color_button_type_2": "default-transparent",
+            "list_1": "",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "type-4",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "height": "auto",
+            "min_height": 0,
+            "size_of_column": "auto",
+            "visible": "desktop_mobile",
+            "parallax": "disable",
+            "animation_to": "center",
+            "animation_from": "none",
+            "animation_opacity": "none",
+            "animation_text": "none",
+            "color_text_1": "",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        },
+        "promobox_89FXxj": {
+          "type": "promobox",
+          "settings": {
+            "url": "shopify:\/\/collections\/ユニオンアリーナ-top",
+            "image": "shopify:\/\/shop_images\/union_arena_white_bg.jpg",
+            "image_size": 900,
+            "image_mobile_size": 900,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "ユニアリ",
+            "text_line_2": "",
+            "text_line_3": "",
+            "style": "2",
+            "button_1": "",
+            "button_1_url": "",
+            "color_button_type_1": "default-transparent",
+            "button_2": "",
+            "button_2_url": "",
+            "color_button_type_2": "default-transparent",
+            "list_1": "",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "type-4",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "height": "auto",
+            "min_height": 0,
+            "size_of_column": "auto",
+            "visible": "desktop_mobile",
+            "parallax": "disable",
+            "animation_to": "center",
+            "animation_from": "none",
+            "animation_opacity": "none",
+            "animation_text": "none",
+            "color_text_1": "",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "1586280492143",
+        "promobox_4KCkFy",
+        "1586280494368",
+        "promobox_DEiE6z",
+        "promobox_89FXxj"
+      ],
+      "settings": {
+        "title": "<p>取り扱いタイトル<\/p>",
+        "container": "boxed",
+        "size_of_columns": "5",
+        "size_of_columns_mobile": "2",
+        "margins_for_columns": "preset_1",
+        "align_of_columns": "top_center",
+        "disable_column_paddings": false,
+        "precedence": "",
+        "customization_class": ""
+      }
+    },
+    "1586282646707": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 40,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "information_line_x9iihn": {
+      "type": "information-line",
+      "blocks": {
+        "content_Vwb8yG": {
+          "type": "content",
+          "settings": {
+            "icon": "theme-100",
+            "title": "New Arrival",
+            "paragraph": "　各タイトルの新着情報をお届け！",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_Vwb8yG"
+      ],
+      "settings": {
+        "title": "",
+        "type": "1",
+        "style": "1"
+      }
+    },
+    "spacer_WVcLJM": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 45,
+        "margin_bottom": 0,
+        "margin_top_mobile": 35,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "carousel_products_Wb9YUt": {
+      "type": "carousel-products",
+      "blocks": {
+        "collection_VtrDBF": {
+          "type": "collection",
+          "settings": {
+            "title": "ポケモンカード",
+            "collection": "pokemon-cardgame"
+          }
+        }
+      },
+      "block_order": [
+        "collection_VtrDBF"
+      ],
+      "settings": {
+        "show_title": true,
+        "container": "boxed",
+        "size_of_columns": "4",
+        "max_count": 16,
+        "autoplay": true,
+        "speed": 6,
+        "infinite": true,
+        "arrows": true,
+        "bullets": true
+      }
+    },
+    "spacer_6aYnkP": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 40,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "carousel_products_BmJ6V4": {
+      "type": "carousel-products",
+      "blocks": {
+        "collection_GVHrfr": {
+          "type": "collection",
+          "settings": {
+            "title": "ワンピースカード",
+            "collection": "ワンピースカードゲーム"
+          }
+        }
+      },
+      "block_order": [
+        "collection_GVHrfr"
+      ],
+      "settings": {
+        "show_title": true,
+        "container": "boxed",
+        "size_of_columns": "4",
+        "max_count": 6,
+        "autoplay": true,
+        "speed": 5,
+        "infinite": true,
+        "arrows": true,
+        "bullets": true
+      }
+    },
+    "spacer_4QKQp6": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 40,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "carousel_products_eXF4DQ": {
+      "type": "carousel-products",
+      "blocks": {
+        "collection_h4CYBA": {
+          "type": "collection",
+          "settings": {
+            "title": "遊戯王",
+            "collection": "遊戯王"
+          }
+        }
+      },
+      "block_order": [
+        "collection_h4CYBA"
+      ],
+      "settings": {
+        "show_title": true,
+        "container": "boxed",
+        "size_of_columns": "4",
+        "max_count": 6,
+        "autoplay": true,
+        "speed": 5,
+        "infinite": true,
+        "arrows": true,
+        "bullets": true
+      }
+    },
+    "spacer_ghgd9K": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 40,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "carousel_products_tANNHM": {
+      "type": "carousel-products",
+      "blocks": {
+        "collection_hbWfkT": {
+          "type": "collection",
+          "settings": {
+            "title": "デュエルマスターズ",
+            "collection": "デュエルマスターズ"
+          }
+        }
+      },
+      "block_order": [
+        "collection_hbWfkT"
+      ],
+      "settings": {
+        "show_title": true,
+        "container": "boxed",
+        "size_of_columns": "4",
+        "max_count": 6,
+        "autoplay": true,
+        "speed": 5,
+        "infinite": true,
+        "arrows": true,
+        "bullets": true
+      }
+    },
+    "spacer_rdJJCc": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 40,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "carousel_products_H4hJEG": {
+      "type": "carousel-products",
+      "blocks": {
+        "collection_pcnD67": {
+          "type": "collection",
+          "settings": {
+            "title": "ユニオンアリーナ",
+            "collection": "ユニオンアリーナ"
+          }
+        }
+      },
+      "block_order": [
+        "collection_pcnD67"
+      ],
+      "settings": {
+        "show_title": true,
+        "container": "boxed",
+        "size_of_columns": "4",
+        "max_count": 6,
+        "autoplay": true,
+        "speed": 5,
+        "infinite": true,
+        "arrows": true,
+        "bullets": true
+      }
+    }
+  },
+  "order": [
+    "1586280477165",
+    "1586280453180",
+    "1586282646707",
+    "information_line_x9iihn",
+    "spacer_WVcLJM",
+    "carousel_products_Wb9YUt",
+    "spacer_6aYnkP",
+    "carousel_products_BmJ6V4",
+    "spacer_4QKQp6",
+    "carousel_products_eXF4DQ",
+    "spacer_ghgd9K",
+    "carousel_products_tANNHM",
+    "spacer_rdJJCc",
+    "carousel_products_H4hJEG"
+  ]
+}

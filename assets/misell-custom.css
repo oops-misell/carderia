@@ -1,0 +1,10 @@
+.promobox,body{font-style:normal;}p{font-style:var(--base-style);}
+.promobox,
+
+/* ブログ記事の見出しと本文にデフォルトで当たっているイタリックを削除 */
+
+.article .font-italic,
+.post .font-italic,
+blockquote {
+  font-style: var(--heading-style) !important;
+}

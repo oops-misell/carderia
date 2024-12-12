@@ -1,0 +1,136 @@
+{
+  "layout": "quick-view",
+  "sections": {
+    "main": {
+      "type": "main-quick-view",
+      "blocks": {
+        "collections": {
+          "type": "collections",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "details": {
+          "type": "details",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "icon_with_text": {
+          "type": "icon_with_text",
+          "disabled": true,
+          "settings": {
+            "style": "inline",
+            "icon_svg_1": "theme-127",
+            "text_1": "<p>安心の品質保証:チェックアウトにお進みください<\/p>",
+            "icon_svg_2": "theme-142",
+            "text_2": "<p>無料配送 : 営業日の翌日配送!<\/p>",
+            "icon_svg_3": "theme-144",
+            "text_3": "<p>安心の価格 : 14日間の返品保証<\/p>",
+            "icon_svg_4": "",
+            "text_4": "",
+            "icon_svg_5": "",
+            "text_5": "",
+            "icon_svg_6": "",
+            "text_6": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "content": ""
+          }
+        },
+        "countdown": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {}
+        },
+        "stock_countdown": {
+          "type": "stock_countdown",
+          "settings": {}
+        },
+        "delivery_countdown": {
+          "type": "delivery_countdown",
+          "disabled": true,
+          "settings": {}
+        },
+        "border": {
+          "type": "border",
+          "disabled": true,
+          "settings": {}
+        },
+        "options": {
+          "type": "options",
+          "disabled": true,
+          "settings": {}
+        },
+        "popups": {
+          "type": "popups",
+          "disabled": true,
+          "settings": {}
+        },
+        "notes": {
+          "type": "notes",
+          "disabled": true,
+          "settings": {}
+        },
+        "buttons_quantity": {
+          "type": "buttons_quantity",
+          "settings": {}
+        },
+        "free_shipping": {
+          "type": "free_shipping",
+          "settings": {}
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "disabled": true,
+          "settings": {}
+        },
+        "payments": {
+          "type": "payments",
+          "settings": {}
+        },
+        "social_share_buttons": {
+          "type": "social_share_buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "collections",
+        "title",
+        "details",
+        "price",
+        "icon_with_text",
+        "description",
+        "countdown",
+        "stock_countdown",
+        "delivery_countdown",
+        "border",
+        "options",
+        "popups",
+        "notes",
+        "buttons_quantity",
+        "free_shipping",
+        "pickup_availability",
+        "payments",
+        "social_share_buttons"
+      ],
+      "settings": {
+        "gallery_size": "6",
+        "enable_sticky_sidebar": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "show_content": true
+      }
+    },
+    "carousel_products_YTYJxb": {
+      "type": "carousel-products",
+      "blocks": {
+        "collection_kiCRCd": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "ポケモンカードゲーム-超電ブレイカー"
+          }
+        }
+      },
+      "block_order": [
+        "collection_kiCRCd"
+      ],
+      "settings": {
+        "show_title": true,
+        "container": "boxed",
+        "size_of_columns": "4",
+        "max_count": 13,
+        "autoplay": true,
+        "speed": 5,
+        "infinite": true,
+        "arrows": true,
+        "bullets": true
+      }
+    },
+    "carousel_products_KQPjfw": {
+      "type": "carousel-products",
+      "blocks": {
+        "collection_BgV7VE": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "ポケモンカードゲーム-汎用カード"
+          }
+        }
+      },
+      "block_order": [
+        "collection_BgV7VE"
+      ],
+      "settings": {
+        "show_title": true,
+        "container": "boxed",
+        "size_of_columns": "4",
+        "max_count": 6,
+        "autoplay": true,
+        "speed": 5,
+        "infinite": true,
+        "arrows": true,
+        "bullets": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "carousel_products_YTYJxb",
+    "carousel_products_KQPjfw"
+  ]
+}
