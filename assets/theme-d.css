@@ -2090,8 +2090,7 @@ input:checked + .input-checkbox--input-out span i {
 }
 
 .product-collection--centered .product-collection__content {
-	align-items: center !important;
-	text-align: center;
+	text-align: left;
 }
 .product-collection--centered .product-collection__buttons,
 .product-collection--centered .product-collection__buttons-section {

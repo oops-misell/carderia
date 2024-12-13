@@ -64,3 +64,20 @@
   height: 100%;
   object-fit: contain;
 }
+
+/* 商品情報のスタイル */
+.product-collection__content .product-collection__price {
+  margin: 0 0 5px !important;
+}
+.product-collection__content .product-collection__price .price {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product-collection__content .product-collection__price .price > span::after {
+  font-weight: normal;
+}
+.product-collection__content .product-stock {
+  font-size: 12px;
+  color: #666;
+}

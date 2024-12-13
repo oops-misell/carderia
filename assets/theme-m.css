@@ -1905,8 +1905,7 @@ form {
 }
 
 .product-collection--centered .product-collection__content {
-  align-items: center !important;
-  text-align: center;
+  text-align: left;
 }
 .product-collection--centered .product-collection__buttons, .product-collection--centered .product-collection__buttons-section {
   justify-content: center;
