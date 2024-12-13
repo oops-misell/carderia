@@ -97,21 +97,11 @@
                     {% endif %}
                     <span class="tax-included">(税込)</span>
                   </p>
-                  {% if product.available %}
-                    {% assign found_inventory = false %}
-                    {% for variant in product.variants %}
-                      {% if variant.inventory_quantity > 0 %}
-                        <p class="product-stock">在庫数 {{ variant.inventory_quantity }}点</p>
-                        {% assign found_inventory = true %}
-                        {% break %}
-                      {% endif %}
-                    {% endfor %}
-                    {% unless found_inventory %}
-                      <p class="product-stock">在庫なし</p>
-                    {% endunless %}
-                  {% else %}
-                    <p class="product-stock">在庫なし</p>
-                  {% endif %}
+                  
+                  <!-- 在庫情報を追加 -->
+                  <p class="product-stock">
+                      在庫数 {{ product.variants | map: 'inventory_quantity' | sum | default: 0 }} 点
+                  </p>
                 </div>
               </a>
             </div>
