@@ -1,4 +1,4 @@
-<!-- snippets/product-get-price.liquid -->
+<!-- snippets/product-get-price-custom.liquid -->
 {% if settings.product_info_show_tax_included %}
     <style>
         .price > span::after {
@@ -13,11 +13,20 @@
 
 
 {%- assign add_js_attribute = add_js_attribute | default: true -%}
-{%- if compare_at_price > price -%}
-    <span class="price price--sale"{% if add_js_attribute %} data-js-product-price{% endif %}><span>{{ compare_at_price | money }}</span>{% if settings.price_show_sale_separator %}{{ 'products.product.price_sale_separator' | t }}{% endif %}<span>{{ price | money }}</span></span>
+
+{%- assign min_price = product.variants | map: 'price' | sort | first %}
+{%- assign max_price = product.variants | map: 'price' | sort | last %}
+
+{%- if product.variants.size > 1 -%}
+    <span class="price"{% if add_js_attribute %} data-js-product-price{% endif %}>
+        <span>¥{{ min_price | divided_by: 100 | round }} 〜</span>
+    </span>
 {%- else -%}
-    <span class="price"{% if add_js_attribute %} data-js-product-price{% endif %}><span>{{ price | money }}</span></span>
+    <span class="price"{% if add_js_attribute %} data-js-product-price{% endif %}>
+        <span>¥{{ product.variants.first.price | divided_by: 100 | round }}</span>
+    </span>
 {%- endif -%}
+
 {%- if current_variant.unit_price_measurement -%}
     <span class="price-unit d-block mt-5">
         <label class="d-none">{{ 'products.product.unit_price_label' | t }}</label>
@@ -39,7 +48,3 @@
         </span>
     </span>
 {%- endif -%}
-
-<style>
-
-</style>
