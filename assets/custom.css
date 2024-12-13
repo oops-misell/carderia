@@ -1,0 +1,66 @@
+/* ------------------- */
+/* コレクションページ */
+/* ------------------- */
+
+/* 売り切れ商品のスタイル */
+.product-collection__image[data-available="false"] {
+  position: relative;
+}
+
+.product-collection__image[data-available="false"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.product-collection__image[data-available="false"]::after {
+  content: "SOLD OUT";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: rgb(31, 41, 55);
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .product-collection__image[data-available="false"]::after {
+    font-size: 20px;
+  }
+}
+
+/* 商品画像のスタイル */
+.product-collection__image {
+  background: #f8f8f8;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.product-collection__image a {
+  display: block;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.product-collection__image .rimage {
+  height: 100%;
+}
+
+.product-collection__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
