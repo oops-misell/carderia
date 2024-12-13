@@ -50,15 +50,24 @@
         "default_view_grid_lg": "6",
         "default_view_grid_md": "4",
         "default_view_grid_sm": "3",
-        "default_view_grid_xs": "2",
+        "default_view_grid_xs": "3",
         "current_filters_visibility": "mobile",
         "uppercase_filter_title": false,
         "show_filter_border": false
+      }
+    },
+    "misell_horizontal_list_39PLVF": {
+      "type": "misell-horizontal-list",
+      "settings": {
+        "title": "[最新弾] テラスタルフェスex",
+        "collection": "ポケモンカードゲーム-top",
+        "product_limit": 18
       }
     }
   },
   "order": [
     "page-heading",
-    "product-grid"
+    "product-grid",
+    "misell_horizontal_list_39PLVF"
   ]
 }
