@@ -84,20 +84,13 @@
                 <div class="product-info">
                   <p class="product-title">{{ product.title }}</p>
                   <p class="product-price">
-                    {% if product.variants.size > 1 %}
-                      {% assign min_price = product.price_min %}
-                      {% assign max_price = product.price_max %}
-                      {% if min_price != max_price %}
-                        {{ min_price | money }}～
-                      {% else %}
-                        {{ min_price | money }}
-                      {% endif %}
-                    {% else %}
-                      {{ product.price | money }}
-                    {% endif %}
-                    <span class="tax-included">(税込)</span>
+                      {% render 'product-get-price-custom' with 
+                        product: product,
+                        price: product.price,
+                        compare_at_price: product.compare_at_price,
+                        current_variant: product.selected_or_first_available_variant
+                      %}
                   </p>
-                  
                   <!-- 在庫情報を追加 -->
                   <p class="product-stock">
                       在庫数 {{ product.variants | map: 'inventory_quantity' | sum | default: 0 }} 点
@@ -333,20 +326,6 @@
     -webkit-line-clamp: 2; /* 2行まで表示 */
     -webkit-box-orient: vertical;
     overflow: hidden;
-  }
-
-  .misell-horizontal-list-section .product-price {
-    font-size: 14px;
-    font-weight: bold;
-    margin: 5px 0;
-    color: #000;
-  }
-
-  .misell-horizontal-list-section .product-price .tax-included {
-    font-size: 12px;
-    font-weight: normal;
-    margin-left: 3px;
-    color: #666;
   }
 
   .misell-horizontal-list-section .product-stock {
@@ -595,6 +574,10 @@
       width: 16px;
       height: 16px;
     }
+  }
+
+  .misell-horizontal-list-section .product-price {
+    margin-bottom: 5px!important;
   }
 {% endstylesheet %}
 
