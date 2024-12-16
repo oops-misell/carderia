@@ -1,3 +1,9 @@
+{% assign show_label_in_stock = settings.product_collection_show_label_in_stock %}
+{% assign show_label_pre_order = settings.product_collection_show_label_pre_order %}
+{% assign show_label_out_stock = settings.product_collection_show_label_out_stock %}
+{% assign show_label_sale = settings.product_collection_show_label_sale %}
+{% assign show_label_new = settings.product_collection_show_label_new %}
+{% assign show_label_hot = settings.product_collection_show_label_hot %}
 <section class="misell-horizontal-list-section">
   <div class="section-header">
     {% if section.settings.title != blank %}
@@ -38,6 +44,31 @@
             <div class="product-item" data-product-id="{{ product.selected_or_first_available_variant.id }}" data-available="{% if product.available %}true{% else %}false{% endif %}">
               <a href="{{ product.url }}" class="product-link">
                 <div class="product-image-wrapper">
+                  {%- if show_label_in_stock or show_label_pre_order or show_label_out_stock or show_label_sale or show_label_new or show_label_hot -%}
+                    <div class="product-image__overlay-top">
+                      <div class="product-collection__labels">
+                        {%- if show_label_hot -%}
+                          {% include 'product-get-label-hot' %}
+                        {%- endif -%}
+                        {%- if show_label_new -%}
+                          {% include 'product-get-label-new' %}
+                        {%- endif -%}
+                        {%- if show_label_sale -%}
+                          {% include 'product-get-label-sale' %}
+                        {%- endif -%}
+                        {%- if show_label_in_stock -%}
+                          {% include 'product-get-label-in-stock' %}
+                        {%- endif -%}
+                        {%- if show_label_pre_order -%}
+                          {% include 'product-get-label-pre-order' %}
+                        {%- endif -%}
+                        {%- if show_label_out_stock -%}
+                          {% include 'product-get-label-out-stock' %}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  {%- endif -%}
+
                   {% if product.featured_image %}
                     <img
                       class="product-image"
@@ -151,6 +182,24 @@
 {% endschema %}
 
 {% stylesheet %}
+  .misell-horizontal-list-section .product-image__overlay-top {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 2;
+  }
+
+  .misell-horizontal-list-section .product-collection__labels {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* カートボタンのz-index調整 */
+  .misell-horizontal-list-section .cart-button {
+    z-index: 3;
+  }
+
   .misell-horizontal-list-section {
     background: #fff;
   }
