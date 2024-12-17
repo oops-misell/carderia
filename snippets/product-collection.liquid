@@ -237,6 +237,12 @@
                         {% include 'product-get-price' %}
                     </div>
                 {%- endif -%}
+
+                <!-- 在庫情報を追加 -->
+                <p class="product-stock">
+                    在庫数 {{ product.variants | map: 'inventory_quantity' | sum | default: 0 }} 点
+                </p>
+                
                 <div class="product-collection__control d-flex flex-column w-100">
                     {%- if show_options and show_custom_options -%}
                         <div class="product-collection__options">
@@ -301,11 +307,6 @@
                         </div>
                     {%- endif -%}
                 </div>
-
-                <!-- 在庫情報を追加 -->
-                <p class="product-stock">
-                    在庫数 {{ product.variants | map: 'inventory_quantity' | sum | default: 0 }} 点
-                </p>
 
                 {%- if show_reviews -%}
                     <div class="product-collection__reviews">
