@@ -59,8 +59,8 @@
     "misell_horizontal_list_39PLVF": {
       "type": "misell-horizontal-list",
       "settings": {
-        "title": "[最新弾] テラスタルフェスex",
-        "collection": "ポケモンカードゲーム-top",
+        "title": "MISEルサポートコレクション",
+        "collection": "miseルサポート-テスト",
         "product_limit": 18
       }
     }
