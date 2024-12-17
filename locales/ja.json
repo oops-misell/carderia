@@ -538,7 +538,7 @@
       "recommended_products_title": "おすすめ商品",
       "quick_buy": "クイックビュー",
       "regular_price": "通常価格",
-      "price_sale_separator": "から",
+      "price_sale_separator": "",
       "price_tax_included": "(税込)",
       "price_sale_details_html": "お買い得： {{ price }} ({{ procent }}%)",
       "include_taxes": "(税込)",
