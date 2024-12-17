@@ -116,3 +116,7 @@
     font-size: 10px;
   }
 }
+/* カートボタンを非表示にし、カートアイコンをクリックしたらこれをクリックしたことにする */
+.product-collection__buttons {
+  display: none !important;
+}
