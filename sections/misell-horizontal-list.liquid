@@ -113,7 +113,7 @@
                   </button>
                 </div>
                 <div class="product-info">
-                  <p class="product-title">{{ product.title }}</p>
+                  <p class="product-title js-product-title">{{ product.title }}</p>
                   <p class="product-price">
                       {% render 'product-get-price-custom' with 
                         product: product,
@@ -365,7 +365,7 @@
   }
 
   .misell-horizontal-list-section .product-title {
-    font-size: 14px;
+    font-size: 13px;
     margin: 5px 0;
     color: #333;
     font-weight: normal;
@@ -376,6 +376,13 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  @media screen and (max-width: 767px) {
+    .misell-horizontal-list-section .product-title {
+      font-size: 10px;
+    }
+  }
+
 
   .misell-horizontal-list-section .product-stock {
     font-size: 12px;
