@@ -325,10 +325,14 @@
       background: #f3f4f6;
       color: white;
     }
+    .misell-horizontal-list-section .scroll-button:focus {
+      outline: none;
+    }
     
     .misell-horizontal-list-section .scroll-button:disabled {
       opacity: 0.5;
-      cursor: not-allowed;
+      cursor: default;
+      pointer-events: none;
     }
     
     .misell-horizontal-list-section .scroll-button span {
