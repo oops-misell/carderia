@@ -503,6 +503,224 @@
         "arrows": true,
         "bullets": true
       }
+    },
+    "spacer_g3FXnP": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 60,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "home_builder_LQLean": {
+      "type": "home-builder",
+      "blocks": {
+        "promobox_FRTYEH": {
+          "type": "promobox",
+          "settings": {
+            "url": "",
+            "image": "shopify:\/\/shop_images\/sliced-pumpkin-pie.jpg",
+            "image_size": 1450,
+            "image_mobile_size": 550,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "環境デッキから探す",
+            "text_line_2": "",
+            "text_line_3": "",
+            "style": "1",
+            "button_1": "",
+            "button_1_url": "",
+            "color_button_type_1": "default",
+            "button_2": "ボタンテキスト #2",
+            "button_2_url": "",
+            "color_button_type_2": "default",
+            "list_1": "",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "type-2-3",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "height": "auto",
+            "min_height": 0,
+            "size_of_column": "auto",
+            "visible": "desktop_mobile",
+            "parallax": "disable",
+            "animation_to": "none",
+            "animation_from": "none",
+            "animation_opacity": "none",
+            "animation_text": "none",
+            "color_text_1": "#000000",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        },
+        "promobox_txpy8A": {
+          "type": "promobox",
+          "settings": {
+            "url": "",
+            "image": "shopify:\/\/shop_images\/london-uk.jpg",
+            "image_size": 1450,
+            "image_mobile_size": 550,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "パック名から探す",
+            "text_line_2": "",
+            "text_line_3": "",
+            "style": "1",
+            "button_1": "",
+            "button_1_url": "",
+            "color_button_type_1": "default",
+            "button_2": "ボタンテキスト #2",
+            "button_2_url": "",
+            "color_button_type_2": "default",
+            "list_1": "",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "type-2-3",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "height": "auto",
+            "min_height": 0,
+            "size_of_column": "auto",
+            "visible": "desktop_mobile",
+            "parallax": "disable",
+            "animation_to": "none",
+            "animation_from": "none",
+            "animation_opacity": "none",
+            "animation_text": "none",
+            "color_text_1": "#000000",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "promobox_FRTYEH",
+        "promobox_txpy8A"
+      ],
+      "settings": {
+        "title": "<p>商品を探す<\/p>",
+        "container": "boxed",
+        "size_of_columns": "4",
+        "size_of_columns_mobile": "2",
+        "margins_for_columns": "none",
+        "align_of_columns": "top_center",
+        "disable_column_paddings": false,
+        "precedence": "",
+        "customization_class": ""
+      }
+    },
+    "spacer_E3dErM": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 60,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "misell_horizontal_list_N9ypzN": {
+      "type": "misell-horizontal-list",
+      "settings": {
+        "title": "[最新弾] テラスタルフェスex",
+        "collection": "miseルサポート-テスト",
+        "product_limit": 18
+      }
+    },
+    "spacer_Aw6jWy": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 60,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "custom_link_list_cyLe6Y": {
+      "type": "custom-link-list",
+      "blocks": {
+        "link_Kap9MH": {
+          "type": "link",
+          "settings": {
+            "collection": "2-5次元の誘惑",
+            "use_manual_settings": false,
+            "link_title": "タイトル",
+            "link_description": "説明文をここに入力",
+            "link_url": ""
+          }
+        },
+        "link_TbPtQA": {
+          "type": "link",
+          "settings": {
+            "collection": "ポケモンカードゲーム-ace-spec",
+            "use_manual_settings": false,
+            "link_title": "タイトル",
+            "link_description": "説明文をここに入力",
+            "link_url": ""
+          }
+        },
+        "link_qhBKCV": {
+          "type": "link",
+          "settings": {
+            "collection": "miseルサポート-テスト",
+            "use_manual_settings": false,
+            "link_title": "タイトル",
+            "link_description": "説明文をここに入力",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "link_Kap9MH",
+        "link_TbPtQA",
+        "link_qhBKCV"
+      ],
+      "settings": {
+        "show_title": true,
+        "title": "カスタムリンクリスト"
+      }
+    },
+    "spacer_tXbrAP": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 60,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
     }
   },
   "order": [
@@ -519,6 +737,13 @@
     "spacer_ghgd9K",
     "carousel_products_tANNHM",
     "spacer_rdJJCc",
-    "carousel_products_H4hJEG"
+    "carousel_products_H4hJEG",
+    "spacer_g3FXnP",
+    "home_builder_LQLean",
+    "spacer_E3dErM",
+    "misell_horizontal_list_N9ypzN",
+    "spacer_Aw6jWy",
+    "custom_link_list_cyLe6Y",
+    "spacer_tXbrAP"
   ]
 }
