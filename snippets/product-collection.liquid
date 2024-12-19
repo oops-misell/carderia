@@ -240,7 +240,15 @@
 
                 <!-- 在庫情報を追加 -->
                 <p class="product-stock">
-                    在庫数 {{ product.variants | map: 'inventory_quantity' | sum | default: 0 }} 点
+                    {% if product.variants.first.inventory_policy == 'continue' %}
+                        予約受付中
+                    {% else %}
+                        {% assign total_inventory = 0 %}
+                        {% for variant in product.variants %}
+                            {% assign total_inventory = total_inventory | plus: variant.inventory_quantity %}
+                        {% endfor %}
+                        在庫数 {{ total_inventory }} 点
+                    {% endif %}
                 </p>
                 
                 <div class="product-collection__control d-flex flex-column w-100">
