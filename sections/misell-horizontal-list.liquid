@@ -137,7 +137,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
+    touch-action: pan-y pinch-zoom;
     padding-bottom: 40px;
     display: flex;
     align-items: center;
@@ -167,9 +167,6 @@
     grid-template-rows: repeat(2, auto);
     column-gap: 8px;
     padding-left: 16px;
-    user-drag: none;
-    -webkit-user-drag: none;
-    touch-action: pan-x;
   }
 
   .horizontal-list-item {
@@ -349,16 +346,22 @@
 {% javascript %}
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.querySelector('.product-list-container');
-
-  // スクロールホバーインジケーター
   const indicator = document.createElement('div');
   indicator.className = 'scroll-hover-indicator';
   document.body.appendChild(indicator);
 
-  let isScrolling = false, startX, scrollLeft, isDragging = false, startTime, lastScrollTime = 0;
-  const SCROLL_THROTTLE = 16; // 60FPS
+  let isScrolling = false;
+  let startX;
+  let startY;
+  let scrollLeft;
+  let isDragging = false;
+  let startTime;
+  let lastScrollTime = 0;
+  let isHorizontalScroll = false;
+  const SCROLL_THROTTLE = 16;
+  const SCROLL_THRESHOLD = 5;
 
-  // マウスダウンイベント
+  // マウス関連のイベントリスナー
   container.addEventListener('mousedown', (e) => {
     if (e.target.closest('.cart-button')) return;
     e.preventDefault();
@@ -371,7 +374,6 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollLeft = container.scrollLeft;
   });
 
-  // マウスムーブイベント
   container.addEventListener('mousemove', (e) => {
     if (!isScrolling) return;
     const currentTime = Date.now();
@@ -404,19 +406,43 @@ document.addEventListener('DOMContentLoaded', function () {
     indicator.style.display = 'none';
   });
 
-  // タッチイベント
+  // タッチ関連のイベントリスナー
   container.addEventListener('touchstart', (e) => {
     if (e.target.closest('.cart-button')) return;
-    document.getSelection().removeAllRanges();
-    startX = e.touches[0].pageX - container.offsetLeft;
+    startTime = Date.now();
+    startX = e.touches[0].pageX;
+    startY = e.touches[0].pageY;
     scrollLeft = container.scrollLeft;
-  }, { passive: false });
+    isHorizontalScroll = false;
+  }, { passive: true });
 
   container.addEventListener('touchmove', (e) => {
-    e.preventDefault();
-    const x = e.touches[0].pageX - container.offsetLeft;
-    const walk = (x - startX) * 2;
-    container.scrollLeft = scrollLeft - walk;
+    if (!startX || !startY) return;
+
+    const x = e.touches[0].pageX;
+    const y = e.touches[0].pageY;
+    const deltaX = Math.abs(x - startX);
+    const deltaY = Math.abs(y - startY);
+
+    if (!isHorizontalScroll && (deltaX > SCROLL_THRESHOLD || deltaY > SCROLL_THRESHOLD)) {
+      isHorizontalScroll = deltaX > deltaY;
+      
+      if (!isHorizontalScroll) {
+        startX = null;
+        startY = null;
+        return;
+      }
+    }
+
+    if (isHorizontalScroll) {
+      e.preventDefault();
+      const currentTime = Date.now();
+      if (currentTime - lastScrollTime < SCROLL_THROTTLE) return;
+      
+      const walk = (startX - x) * 1.2;
+      container.scrollLeft = scrollLeft + walk;
+      lastScrollTime = currentTime;
+    }
   }, { passive: false });
 
   container.addEventListener('touchend', (e) => {
@@ -424,16 +450,18 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!isDragging && timeElapsed < 200) {
       const target = e.target;
       if (target.closest('.cart-button') || target.closest('a')) {
-        e.preventDefault();
         target.click();
       }
     }
+    startX = null;
+    startY = null;
+    isHorizontalScroll = false;
   });
 
-  // 1列の幅を計算する関数
+  // スクロールボタン関連の機能
   function getColumnWidth() {
-    const productItem = document.querySelector('.horizontal-list-item'); // 修正
-    return productItem ? productItem.offsetWidth + 8 : 0; // 8pxはgrid-gapの値
+    const productItem = document.querySelector('.horizontal-list-item');
+    return productItem ? productItem.offsetWidth + 8 : 0;
   }
 
   // スクロールボタンの制御
