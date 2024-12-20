@@ -184,15 +184,15 @@
                     {
                         breakpoint: theme.breakpoints.values.md,
                         settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
+                            slidesToShow: 3,
+                            slidesToScroll: 3
                         }
                     },
                     {
                         breakpoint: theme.breakpoints.values.sm,
                         settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
+                            slidesToShow: 3,
+                            slidesToScroll: 3
                         }
                     }
                 ]
