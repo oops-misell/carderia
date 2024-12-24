@@ -2,6 +2,60 @@
   "sections": {
     "page-heading": {
       "type": "collection-page-heading",
+      "blocks": {
+        "promobox_Dgrdwj": {
+          "type": "promobox",
+          "settings": {
+            "for_collection": "キャラプレミアムデッキ-duel-masters-lost-誓いの水晶",
+            "url": "",
+            "image_size": 900,
+            "image_mobile_size": 900,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "テキストライン #1",
+            "text_line_2": "テキストライン #2",
+            "text_line_3": "テキストライン #3",
+            "style": "1",
+            "button_1": "ボタンテキスト #1",
+            "button_1_url": "",
+            "color_button_type_1": "default",
+            "button_2": "ボタンテキスト #2",
+            "button_2_url": "",
+            "color_button_type_2": "default",
+            "list_1": "",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "clean",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "height": "auto",
+            "min_height": 0,
+            "size_of_column": "12",
+            "visible": "desktop_mobile",
+            "parallax": "disable",
+            "animation_to": "none",
+            "animation_from": "none",
+            "animation_opacity": "none",
+            "animation_text": "none",
+            "color_text_1": "",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "promobox_Dgrdwj"
+      ],
       "settings": {
         "position": "products_grid_width",
         "default_desktop_title": "title",

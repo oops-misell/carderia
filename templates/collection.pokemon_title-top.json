@@ -100,68 +100,28 @@
         "show_filter_border": true
       }
     },
-    "spacer_NY3kUV": {
-      "type": "spacer",
+    "misell_horizontal_list_xa3pGE": {
+      "type": "misell-horizontal-list",
       "settings": {
-        "margin_top": 60,
-        "margin_bottom": 0,
-        "margin_top_mobile": 0,
-        "margin_bottom_mobile": 0,
-        "container": "boxed",
-        "show_separator": false,
-        "title": ""
+        "title": "テラスタルフェスex",
+        "collection": "テラスタルフェスex",
+        "product_limit": 18
       }
     },
-    "carousel_products_RDTxFX": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_qXjXDA": {
-          "type": "collection",
-          "settings": {
-            "title": "テラスタルフェスex",
-            "collection": "テラスタルフェスex"
-          }
-        }
-      },
-      "block_order": [
-        "collection_qXjXDA"
-      ],
+    "misell_horizontal_list_mEV6MJ": {
+      "type": "misell-horizontal-list",
       "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 16,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
+        "title": "超電ブレイカー",
+        "collection": "ポケモンカードゲーム-超電ブレイカー",
+        "product_limit": 18
       }
     },
-    "carousel_products_zPCjt4": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_zgMPYE": {
-          "type": "collection",
-          "settings": {
-            "title": "超電ブレイカー",
-            "collection": "ポケモンカードゲーム-超電ブレイカー"
-          }
-        }
-      },
-      "block_order": [
-        "collection_zgMPYE"
-      ],
+    "misell_horizontal_list_KHWjRV": {
+      "type": "misell-horizontal-list",
       "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
+        "title": "ACESPEC",
+        "collection": "ポケモンカードゲーム-ace-spec",
+        "product_limit": 18
       }
     },
     "home_builder_jN9iCR": {
@@ -281,270 +241,14 @@
         "precedence": "",
         "customization_class": ""
       }
-    },
-    "spacer_GccDwA": {
-      "type": "spacer",
-      "settings": {
-        "margin_top": 60,
-        "margin_bottom": 60,
-        "margin_top_mobile": 0,
-        "margin_bottom_mobile": 0,
-        "container": "boxed",
-        "show_separator": false,
-        "title": ""
-      }
-    },
-    "carousel_products_kmRgqm": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_iqenCW": {
-          "type": "collection",
-          "settings": {
-            "title": "汎用カード",
-            "collection": "ポケモンカードゲーム-汎用カード"
-          }
-        }
-      },
-      "block_order": [
-        "collection_iqenCW"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
-    },
-    "carousel_products_mwjiAF": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_FTBqxU": {
-          "type": "collection",
-          "settings": {
-            "title": "",
-            "collection": "ポケモンカードゲーム-ace-spec"
-          }
-        }
-      },
-      "block_order": [
-        "collection_FTBqxU"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
-    },
-    "carousel_products_JaD7zM": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_XUM6m3": {
-          "type": "collection",
-          "settings": {
-            "title": "",
-            "collection": "ポケモンカードゲーム-sale"
-          }
-        }
-      },
-      "block_order": [
-        "collection_XUM6m3"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
-    },
-    "carousel_products_8E9gTe": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_TzfNmT": {
-          "type": "collection",
-          "settings": {
-            "title": "New Arrival",
-            "collection": "pokemon-cardgame"
-          }
-        }
-      },
-      "block_order": [
-        "collection_TzfNmT"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
-    },
-    "carousel_products_3FgcrN": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_Uc4M6h": {
-          "type": "collection",
-          "settings": {
-            "title": "デッキ販売",
-            "collection": "ポケモンカードゲーム-デッキ販売"
-          }
-        }
-      },
-      "block_order": [
-        "collection_Uc4M6h"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
-    },
-    "carousel_products_6nQwMr": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_kNbgQW": {
-          "type": "collection",
-          "settings": {
-            "title": "オリジナルパック",
-            "collection": "ポケモンカードゲーム-オリパ"
-          }
-        }
-      },
-      "block_order": [
-        "collection_kNbgQW"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
-    },
-    "carousel_products_93tWXd": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_Ydq8Nf": {
-          "type": "collection",
-          "settings": {
-            "title": "未開封パック",
-            "collection": "ポケモンカードゲーム-新品-未使用品"
-          }
-        }
-      },
-      "block_order": [
-        "collection_Ydq8Nf"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
-    },
-    "carousel_products_AfHLLd": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_CnCMbJ": {
-          "type": "collection",
-          "settings": {
-            "title": "構築済みデッキ",
-            "collection": "構築済みデッキ"
-          }
-        }
-      },
-      "block_order": [
-        "collection_CnCMbJ"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
-    },
-    "carousel_products_r4KzEL": {
-      "type": "carousel-products",
-      "blocks": {
-        "collection_9FQkam": {
-          "type": "collection",
-          "settings": {
-            "title": "サプライ",
-            "collection": "ポケモンカードゲーム-サプライ"
-          }
-        }
-      },
-      "block_order": [
-        "collection_9FQkam"
-      ],
-      "settings": {
-        "show_title": true,
-        "container": "boxed",
-        "size_of_columns": "4",
-        "max_count": 9,
-        "autoplay": false,
-        "speed": 5,
-        "infinite": true,
-        "arrows": true,
-        "bullets": true
-      }
     }
   },
   "order": [
     "page-heading",
     "product-grid",
-    "spacer_NY3kUV",
-    "carousel_products_RDTxFX",
-    "carousel_products_zPCjt4",
-    "home_builder_jN9iCR",
-    "spacer_GccDwA",
-    "carousel_products_kmRgqm",
-    "carousel_products_mwjiAF",
-    "carousel_products_JaD7zM",
-    "carousel_products_8E9gTe",
-    "carousel_products_3FgcrN",
-    "carousel_products_6nQwMr",
-    "carousel_products_93tWXd",
-    "carousel_products_AfHLLd",
-    "carousel_products_r4KzEL"
+    "misell_horizontal_list_xa3pGE",
+    "misell_horizontal_list_mEV6MJ",
+    "misell_horizontal_list_KHWjRV",
+    "home_builder_jN9iCR"
   ]
 }

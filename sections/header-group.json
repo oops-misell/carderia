@@ -7,6 +7,7 @@
       "blocks": {
         "1525791872612": {
           "type": "tape",
+          "disabled": true,
           "settings": {
             "delay": 0,
             "style": "1",
@@ -140,8 +141,8 @@
         "1582328455745"
       ],
       "settings": {
-        "type": "2",
-        "style": "1",
+        "type": "6",
+        "style": "4",
         "transparent_bg": "disable",
         "logo_mobile_centered": false,
         "height": 0,
