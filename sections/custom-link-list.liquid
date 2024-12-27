@@ -83,8 +83,8 @@
   {%- if section.blocks.size > 0 -%}
     <div class="container">
       {%- if section.settings.show_title and section.settings.title != blank -%}
-        <div class="row justify-content-center">
-          <h2 class="h4 col-auto mb-10 text-center">{{ section.settings.title }}</h2>
+        <div class="row justify-content-start">
+          <h2 class="h4 mb-10 text-center">{{ section.settings.title }}</h2>
         </div>
       {%- endif -%}
       <div class="row justify-content-center">
@@ -143,6 +143,21 @@
 </div>
 
 {% style %}
+  
+  .custom-link-list-section  .container {
+    width: 100%;
+    max-width: 1200px;
+  }
+  .custom-link-list-section .h4 {
+    margin: 30px 15px 15px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  @media (width > 768px) {
+    .custom-link-list-section .h4 {
+      padding: 0 16px;
+    }  
+  }
   .custom-link-image {
     display: flex;
     align-items: center;
