@@ -1,15 +1,75 @@
 {
   "sections": {
-    "1586280477165": {
-      "type": "spacer",
+    "custom_link_list_76dL6k": {
+      "type": "custom-link-list",
+      "blocks": {
+        "link_QEimme": {
+          "type": "link",
+          "settings": {
+            "collection": "ポケモンカードゲーム-top",
+            "use_manual_settings": true,
+            "link_title": "ポケモンカードゲーム",
+            "link_description": "",
+            "link_image": "shopify:\/\/shop_images\/pokeka_white_bg.jpg",
+            "link_url": "shopify:\/\/collections\/ポケモンカードゲーム-top"
+          }
+        },
+        "link_gArhet": {
+          "type": "link",
+          "settings": {
+            "collection": "ワンピースカードゲーム-top",
+            "use_manual_settings": true,
+            "link_title": "ワンピースカードゲーム",
+            "link_description": "",
+            "link_image": "shopify:\/\/shop_images\/onepiece_adjusted.jpg",
+            "link_url": "shopify:\/\/collections\/ワンピースカードゲーム-top"
+          }
+        },
+        "link_fJbT6d": {
+          "type": "link",
+          "settings": {
+            "collection": "遊戯王-top",
+            "use_manual_settings": true,
+            "link_title": "遊戯王",
+            "link_description": "",
+            "link_image": "shopify:\/\/shop_images\/yugioh_white_bg_correct.jpg",
+            "link_url": "shopify:\/\/collections\/遊戯王-top"
+          }
+        },
+        "link_a64w3f": {
+          "type": "link",
+          "settings": {
+            "collection": "デュエルマスターズ-top",
+            "use_manual_settings": true,
+            "link_title": "デュエルマスターズ",
+            "link_description": "",
+            "link_image": "shopify:\/\/shop_images\/duema_white_bg_correct.jpg",
+            "link_url": "shopify:\/\/collections\/デュエルマスターズ-top"
+          }
+        },
+        "link_QiNgwy": {
+          "type": "link",
+          "settings": {
+            "collection": "ユニオンアリーナ-top",
+            "use_manual_settings": true,
+            "link_title": "ユニオンアリーナ",
+            "link_description": "",
+            "link_image": "shopify:\/\/shop_images\/union_arena_white_bg.jpg",
+            "link_url": "shopify:\/\/collections\/ユニオンアリーナ-top"
+          }
+        }
+      },
+      "block_order": [
+        "link_QEimme",
+        "link_gArhet",
+        "link_fJbT6d",
+        "link_a64w3f",
+        "link_QiNgwy"
+      ],
+      "disabled": true,
       "settings": {
-        "margin_top": 30,
-        "margin_bottom": 0,
-        "margin_top_mobile": 0,
-        "margin_bottom_mobile": 0,
-        "container": "boxed",
-        "show_separator": false,
-        "title": ""
+        "show_title": true,
+        "title": "取り扱いタイトル一覧"
       }
     },
     "1586280453180": {
@@ -269,12 +329,12 @@
         "promobox_89FXxj"
       ],
       "settings": {
-        "title": "<p>取り扱いタイトル<\/p>",
+        "title": "<h3><strong>取り扱いタイトル一覧<\/strong><\/h3>",
         "container": "boxed",
         "size_of_columns": "6",
         "size_of_columns_mobile": "2",
         "margins_for_columns": "none",
-        "align_of_columns": "top_center",
+        "align_of_columns": "top_left",
         "disable_column_paddings": false,
         "precedence": "",
         "customization_class": ""
@@ -299,7 +359,7 @@
       "settings": {
         "title": "",
         "type": "1",
-        "style": "1"
+        "style": "3"
       }
     },
     "misell_horizontal_list_hfWXHM": {
@@ -344,7 +404,7 @@
     }
   },
   "order": [
-    "1586280477165",
+    "custom_link_list_76dL6k",
     "1586280453180",
     "information_line_x9iihn",
     "misell_horizontal_list_hfWXHM",

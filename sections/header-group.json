@@ -156,8 +156,8 @@
         "enable_country_selector": true,
         "show_country_name": true,
         "country_selector_max_width": 0,
-        "sticky": "disable",
-        "desktop_sticky_type": "slim",
+        "sticky": "desktop_and_mobile",
+        "desktop_sticky_type": "wide",
         "hide_sticky_when_scroll_down": false
       }
     }

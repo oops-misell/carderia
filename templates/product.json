@@ -12,12 +12,16 @@
           "type": "title",
           "settings": {}
         },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
         "details": {
           "type": "details",
           "settings": {}
         },
-        "price": {
-          "type": "price",
+        "options": {
+          "type": "options",
           "settings": {}
         },
         "1758a5c2-c2c6-4a5b-8f2b-56319eaf59ec": {
@@ -41,10 +45,6 @@
         "border": {
           "type": "border",
           "disabled": true,
-          "settings": {}
-        },
-        "options": {
-          "type": "options",
           "settings": {}
         },
         "popups": {
@@ -76,17 +76,18 @@
         },
         "social_share_buttons": {
           "type": "social_share_buttons",
+          "disabled": true,
           "settings": {}
         }
       },
       "block_order": [
         "collections",
         "title",
-        "details",
         "price",
+        "details",
+        "options",
         "1758a5c2-c2c6-4a5b-8f2b-56319eaf59ec",
         "border",
-        "options",
         "popups",
         "buttons_quantity",
         "description_63hiqa",
@@ -95,11 +96,11 @@
         "social_share_buttons"
       ],
       "settings": {
-        "gallery_size": "5",
+        "gallery_size": "4",
         "sidebar": "off",
-        "enable_sticky_sidebar": true,
+        "enable_sticky_sidebar": false,
         "show_tabs": true,
-        "show_tab_description": true,
+        "show_tab_description": false,
         "scrolling_to_opened_tab": false,
         "tabs_type": "sheet"
       }

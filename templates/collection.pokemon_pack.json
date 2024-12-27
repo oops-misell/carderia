@@ -112,18 +112,26 @@
         "title": ""
       }
     },
-    "home_builder_7dRpyE": {
-      "type": "home-builder",
+    "custom_link_list_XGLyBA": {
+      "type": "custom-link-list",
+      "blocks": {
+        "link_UqrQfa": {
+          "type": "link",
+          "settings": {
+            "collection": "",
+            "use_manual_settings": false,
+            "link_title": "タイトル",
+            "link_description": "説明文をここに入力",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "link_UqrQfa"
+      ],
       "settings": {
-        "title": "<p>パック一覧<\/p>",
-        "container": "boxed",
-        "size_of_columns": "6",
-        "size_of_columns_mobile": "2",
-        "margins_for_columns": "none",
-        "align_of_columns": "top_center",
-        "disable_column_paddings": false,
-        "precedence": "",
-        "customization_class": ""
+        "show_title": true,
+        "title": "パック一覧"
       }
     }
   },
@@ -131,6 +139,6 @@
     "page-heading",
     "product-grid",
     "spacer_NY3kUV",
-    "home_builder_7dRpyE"
+    "custom_link_list_XGLyBA"
   ]
 }

@@ -76,21 +76,13 @@
         },
         "1586284627913": {
           "type": "payments",
-          "settings": {}
-        },
-        "2f1bcef1-03b5-442e-b266-1909cbfeea77": {
-          "type": "custom_html",
           "disabled": true,
-          "settings": {
-            "title": "ご案内",
-            "show_title_on_desktop": true,
-            "page_content": ""
-          }
+          "settings": {}
         },
         "menu_NkeTbH": {
           "type": "menu",
           "settings": {
-            "title": "Cardéria",
+            "title": "メニュー",
             "show_title_on_desktop": true,
             "menu": "footer",
             "size": 0,
@@ -103,7 +95,6 @@
         "1586284525260",
         "footer-0",
         "1586284627913",
-        "2f1bcef1-03b5-442e-b266-1909cbfeea77",
         "menu_NkeTbH"
       ],
       "settings": {

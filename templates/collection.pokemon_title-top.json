@@ -124,122 +124,45 @@
         "product_limit": 18
       }
     },
-    "home_builder_jN9iCR": {
-      "type": "home-builder",
+    "custom_link_list_haqX8J": {
+      "type": "custom-link-list",
       "blocks": {
-        "promobox_AAFyrP": {
-          "type": "promobox",
+        "link_nJzBhw": {
+          "type": "link",
           "settings": {
-            "url": "shopify:\/\/collections\/デッキ一覧",
-            "image": "shopify:\/\/shop_images\/resized_image_1.jpg",
-            "image_size": 900,
-            "image_mobile_size": 900,
-            "image_position_x": 50,
-            "color_image_mask": "",
-            "image_mask_opacity": 0.5,
-            "text_line_1": "人気デッキ",
-            "text_line_2": "",
-            "text_line_3": "",
-            "style": "2",
-            "button_1": "",
-            "button_1_url": "",
-            "color_button_type_1": "default-transparent",
-            "button_2": "",
-            "button_2_url": "",
-            "color_button_type_2": "default-transparent",
-            "list_1": "",
-            "custom_html": "",
-            "video_external_url": "",
-            "video_mp4_url": "",
-            "video_autoplay": true,
-            "video_controls": false,
-            "type": "type-3",
-            "content_position": "center",
-            "content_align": "center",
-            "add_container": false,
-            "content_width": 100,
-            "text_width": 0,
-            "height": "auto",
-            "min_height": 0,
-            "size_of_column": "auto",
-            "visible": "desktop_mobile",
-            "parallax": "disable",
-            "animation_to": "center",
-            "animation_from": "none",
-            "animation_opacity": "none",
-            "animation_text": "none",
-            "color_text_1": "",
-            "color_text_2": "",
-            "color_text_3": "",
-            "color_text_bg": "",
-            "color_curtain_bg": "",
-            "customization_class": ""
+            "collection": "デッキ一覧",
+            "use_manual_settings": false,
+            "link_title": "タイトル",
+            "link_description": "説明文をここに入力",
+            "link_url": ""
           }
         },
-        "promobox_jDRqhH": {
-          "type": "promobox",
+        "link_k6YcRc": {
+          "type": "link",
           "settings": {
-            "url": "shopify:\/\/collections\/pokemon-cardgame-pack",
-            "image": "shopify:\/\/shop_images\/resized_image_3.jpg",
-            "image_size": 900,
-            "image_mobile_size": 900,
-            "image_position_x": 50,
-            "color_image_mask": "",
-            "image_mask_opacity": 0.5,
-            "text_line_1": "パック検索",
-            "text_line_2": "",
-            "text_line_3": "",
-            "style": "2",
-            "button_1": "",
-            "button_1_url": "",
-            "color_button_type_1": "default-transparent",
-            "button_2": "",
-            "button_2_url": "",
-            "color_button_type_2": "default-transparent",
-            "list_1": "",
-            "custom_html": "",
-            "video_external_url": "",
-            "video_mp4_url": "",
-            "video_autoplay": true,
-            "video_controls": false,
-            "type": "type-3",
-            "content_position": "center",
-            "content_align": "center",
-            "add_container": false,
-            "content_width": 100,
-            "text_width": 0,
-            "height": "auto",
-            "min_height": 0,
-            "size_of_column": "auto",
-            "visible": "desktop_mobile",
-            "parallax": "disable",
-            "animation_to": "center",
-            "animation_from": "none",
-            "animation_opacity": "none",
-            "animation_text": "none",
-            "color_text_1": "",
-            "color_text_2": "",
-            "color_text_3": "",
-            "color_text_bg": "",
-            "color_curtain_bg": "",
-            "customization_class": ""
+            "collection": "pokemon-cardgame-pack",
+            "use_manual_settings": false,
+            "link_title": "タイトル",
+            "link_description": "説明文をここに入力",
+            "link_url": ""
           }
         }
       },
       "block_order": [
-        "promobox_AAFyrP",
-        "promobox_jDRqhH"
+        "link_nJzBhw",
+        "link_k6YcRc"
       ],
       "settings": {
-        "title": "<p>商品を探す<\/p>",
-        "container": "boxed",
-        "size_of_columns": "5",
-        "size_of_columns_mobile": "2",
-        "margins_for_columns": "none",
-        "align_of_columns": "top_center",
-        "disable_column_paddings": false,
-        "precedence": "",
-        "customization_class": ""
+        "show_title": true,
+        "title": "商品を探す"
+      }
+    },
+    "misell_horizontal_list_HBWGQG": {
+      "type": "misell-horizontal-list",
+      "settings": {
+        "title": "汎用カード",
+        "collection": "ポケモンカードゲーム-汎用カード",
+        "product_limit": 18
       }
     }
   },
@@ -249,6 +172,7 @@
     "misell_horizontal_list_xa3pGE",
     "misell_horizontal_list_mEV6MJ",
     "misell_horizontal_list_KHWjRV",
-    "home_builder_jN9iCR"
+    "custom_link_list_haqX8J",
+    "misell_horizontal_list_HBWGQG"
   ]
 }
